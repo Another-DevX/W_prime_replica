@@ -227,8 +227,8 @@ ROOT::RDF::RNode MinimalSelection(ROOT::RDF::RNode df) {
     return df
         .Filter("Muon_size == 1",
                 "Exactly one muon")
-        .Filter("Electron_size == 0",
-                "Electron veto")
+        .Filter("Sum(Electron.PT > 25.0) == 0",
+                "Lepton veto: no electron with pT > 25 GeV")
         .Filter("Jet_size >= 2",
                 "At least two jets")
         .Filter("Sum(Jet.PT > 60.0) >= 2",
