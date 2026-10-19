@@ -1,0 +1,4 @@
+import model sm
+generate p p > w+ j j
+add process p p > w- j j
+output /home/anotherdev/physics/Wprime/results/Wjets
